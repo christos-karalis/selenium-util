@@ -1,4 +1,4 @@
-package com.neurocom.tariff.selenium.test.rule;
+package com.github.karalis.selenium.test.rule;
 
 import com.thoughtworks.selenium.SeleneseTestBase;
 import org.apache.log4j.Logger;

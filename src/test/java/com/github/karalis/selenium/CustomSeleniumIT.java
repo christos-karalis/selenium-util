@@ -1,14 +1,12 @@
-package com.jcn.selenium;
+package com.github.karalis.selenium;
 
-import com.neurocom.tariff.selenium.test.rule.BrowserEnabled;
-import com.neurocom.tariff.selenium.test.rule.SeleniumIT;
+import com.github.karalis.selenium.test.rule.BrowserEnabled;
+import com.github.karalis.selenium.test.rule.SeleniumIT;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,8 +18,11 @@ import java.util.concurrent.TimeUnit;
  * Created by c.karalis on 4/26/2016.
  */
 public class CustomSeleniumIT extends SeleniumIT {
+
     @Rule
     public BrowserEnabled browserEnabled = new BrowserEnabled();
+
+
     protected Wait wait;
 
 
@@ -45,11 +46,6 @@ public class CustomSeleniumIT extends SeleniumIT {
 
         driver.findElement(By.partialLinkText("ΠΟΛΙΤΙΚΗ")).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.partialLinkText("ΠΟΛΙΤΙΚΗ")));
-
-
     }
-
-
-
 
 }

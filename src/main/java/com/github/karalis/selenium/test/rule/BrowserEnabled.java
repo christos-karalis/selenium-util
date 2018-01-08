@@ -1,4 +1,4 @@
-package com.neurocom.tariff.selenium.test.rule;
+package com.github.karalis.selenium.test.rule;
 
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
@@ -26,7 +26,13 @@ public class BrowserEnabled implements MethodRule {
     @Retention(RetentionPolicy.RUNTIME)
     @Target({ElementType.METHOD})
     public @interface InternetExplorer {
+        /**
+         * default version is 8
+         */
         String version() default "8";
+        /**
+         * default platform is {@link Platform}.WINDOWS
+         */
         Platform platform() default Platform.WINDOWS;
     }
 
